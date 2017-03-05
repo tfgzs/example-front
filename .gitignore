@@ -1,0 +1,9 @@
+/.idea/
+/node_modules/**
+/typings/
+*.log
+*.gz
+*.zip
+/dist/**
+/release/**
+.project
