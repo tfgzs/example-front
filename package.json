@@ -1,15 +1,23 @@
 {
   "name": "example-front",
   "version": "1.0.0",
-  "description": "",
+  "description": "my bookstore website",
+  "main": "app.js",
   "scripts": {
-    "start": "node server.js"
+    "test": "gulp",
+    "start": "node app.js"
   },
   "author": "tfgzs",
   "license": "MIT",
   "dependencies": {
-    "koa": "^2.0.1",
-    "koa-static": "^3.0.0"
+    "auto-reload": "0.0.2",
+    "co-views": "^2.1.0",
+    "ejs": "^2.4.2",
+    "koa": "^1.2.0",
+    "koa-route": "^2.4.2",
+    "koa-static-server": "^0.1.8",
+    "koa-views": "^4.1.0",
+    "webpack": "^1.13.1"
   },
   "devDependencies": {
     "chalk": "^1.1.3",

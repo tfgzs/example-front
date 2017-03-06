@@ -1,0 +1,50 @@
+.recommend {
+    padding: 0.0rem 0.305556rem;
+    .recommendBox:first-child {
+        margin-top: 0.444444rem;
+    }
+    .recommendBox:not(:first-child) {
+        margin-bottom: 0.888889rem;
+    }
+    .recommendBox {
+        width: 100%;
+        margin-top: auto;
+        margin-bottom: 0.888889rem;
+        .recommendImg {
+            box-shadow: 0.0rem 0.027778rem 0.083333rem 0.0rem #999;
+            img {
+                display: block;
+                width: 2.0rem;
+                height: 2.805556rem;
+            }
+        }
+        .recommendWords {
+            margin-left: 0.333333rem;
+            width: 75%;
+            height: 2.805556rem;
+            .recommendName {
+                color: #3e3e3e;
+                font-size: 0.444444rem;
+                // font-face:黑体-Light;
+            }
+            .recommendAuthor {
+                margin-top: 0.222222rem;
+                margin-bottom: 0.444444rem;
+                color: #999999;
+                font-size: 0.416667rem;
+                // font-face:黑体-Light;
+            }
+            .recommendProfile {
+                color: #101010;
+                font-size: 0.361111rem;
+                // font-face:黑体-Light;
+                // display: inline-block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+}

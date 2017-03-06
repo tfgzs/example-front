@@ -19,7 +19,7 @@
 	- `npm install -g gulp`
 	- `npm install -g bower`
 3. 安装本地依赖 	`npm install`
-4. 编译并运行   	`gulp`
+4. 编译并运行   	`npm test`
 5. 浏览器访问	`http://localhost:80`
  
 ## 生产环境上线流程

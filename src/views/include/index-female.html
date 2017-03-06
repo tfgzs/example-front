@@ -1,0 +1,26 @@
+<!-- 女生推荐 -->
+<section class="recommend">
+    <!-- title部分：可模块化 -->
+    <div class="title clearfix">
+        <div class="titleLeft fl">
+            <img class="titleIcon " src="/static/img/title.png">
+            <p>女生推荐</p>
+        </div>
+        <div class="titleRight fr ">
+            <a class="checkMore " href="#">查看更多</a>
+            <img class="moreIcon " src="/static/img/more.png">
+        </div>
+    </div>
+    <div class="content">
+       <div class="recommendBox clearfix" v-for="item in nanpintuijian_bookList">
+            <div class="recommendImg fl">
+                <img v-bind:src="item.image_book">
+            </div>
+            <div class="recommendWords fl">
+                <p class="recommendName">{{item.name}}</p>
+                <p class="recommendAuthor">{{item.penname}}</p>
+                <p class="recommendProfile">{{item.description}}</p>
+            </div>
+        </div>
+    </div>
+</section>
