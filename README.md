@@ -47,6 +47,7 @@
 - `npm config set registry https://registry.npm.taobao.org` 以后使用`npm install`时从淘宝镜像仓库下载，防止被墙，提高下载速度
 - `npm init` 初始化一个node项目
 - `npm install -g gulp` 		全局安装gulp依赖
+- `npm install jquery` 		安装jquery依赖到当前目录下的`node_modules`文件夹中
 - `npm install --save koa` 安装koa到当前目录下的`node_modules`文件夹中，并把依赖关系保存到`package.json`文件中的`dependencies`节点
 - `npm install --save-dev gulp`安装gulp到当前目录下的`node_modules`文件夹中，并把依赖关系保存到`package.json`文件中的`devDependencies`节点
 - `npm uninstall --sava koa` 	卸载koa依赖
