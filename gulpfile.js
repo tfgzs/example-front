@@ -114,7 +114,7 @@ gulp.task('build:html', ['build:less', 'build:css', 'build:js'], function() {
 });
 
 //把src目录下面的文件压缩之后拷贝到dist目录下
-gulp.task('build', ['build:html'], function() {
+gulp.task('build:all', ['build:html'], function() {
 	//js/css/html 之外的所有文件都直接拷贝,给文件设置权限0644：当前用户拥有读写权限，其他的用户只有只读权限
 	gulp.src(['src/**/*.*', '!src/static/css/*.+(css|less)', '!src/static/js/*.js', '!src/templates/**/*.html', ])
 		.pipe(gulp.dest('dist/', {
@@ -127,20 +127,19 @@ gulp.task('clean', function() {
 		read: false
 	}).pipe(clean());
 });
-// 把项目打包发布
-gulp.task('publish', ['prod'],function() {
+//编译之后打包文件
+gulp.task('zip', ['build'],function() {
 	return gulp.src('dist/**/*')
 		.pipe(zip(config.appName + '-' + config.version + '.zip'))
 		.pipe(gulp.dest('release'))
 });
-
-//生产环境：压缩js/css/html
-gulp.task('prod', function(cb) {
-	gulpSequence('clean', 'build')(cb);
+//编译文件
+gulp.task('build', function(cb) {
+	gulpSequence('clean', 'build:all')(cb);
 });
 //测试环境：启动本地服务器、修改代码后自动加载实时预览、不压缩代码
 gulp.task('test', function(cb) {
-	gulpSequence('clean', 'build', 'serve')(cb);
+	gulpSequence('clean', 'build:all', 'serve')(cb);
 });
 gulp.task('default', ['test'], function() {
 	console.log('')

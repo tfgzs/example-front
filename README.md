@@ -1,5 +1,13 @@
 # 前端开发脚手架
 ---
+
+### 技术栈:
+- koa
+- gulp
+- bower
+- docker
+- webpack
+
 ## 开发规范
 -  `favicon.ico`图标放到 	`src/`					目录下
 -  所有的`js`	文件放到  	`src/static/js/`		目录下
@@ -16,16 +24,16 @@
 1. 生产环境上安装node环境
 2. 安装全局依赖 	`npm install -g gulp`
 3. 安装本地依赖 	`npm install`
-4. 编译并运行   	`gulp`
+4. 编译并运行   	`npm test`
 5. 浏览器访问		`http://localhost:80`
  
 ## 生产环境上线流程
 1. 生产环境上安装node环境
 2. 安装全局依赖 `npm install -g gulp`
 3. 安装本地依赖 `npm install`
-4. 编译源码文件 `gulp prod`
-5. 运行 `npm start`
-
+4. 编译源码文件 `gulp build`
+5. 运行 `npm prod`
+6. 浏览器访问 `http://localhost:80`
 
 ## gulp常用插件
 - gulp-jshint 检查js文件是否有报错或警告
