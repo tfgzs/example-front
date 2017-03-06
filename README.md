@@ -35,13 +35,6 @@
 7. 浏览器访问 `http://localhost:80`
 
 
-## bower常用命令
-- `bower init` 初始化一个bower项目
-- `bower install --save jquery` 　　　　安装最新版本 jQuery 依赖
-- `bower install --save jquery#版本号` 　安装指定版本 jQuery 依赖
-- `bower install jquery underscore` 一次性安装 jQuery 和 underscore 依赖
-- `bower uninstall --save jquery` 	卸载jQuery依赖
-
 ## npm 常用命令
 - `npm config set registry https://registry.npm.taobao.org` 以后使用`npm install`时从淘宝镜像仓库下载，防止被墙，提高下载速度
 - `npm init` 初始化一个node项目
