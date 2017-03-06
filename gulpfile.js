@@ -1,7 +1,9 @@
 'use strict';
 const gulp = require('gulp');
 const gulpif = require('gulp-if');
-const connect = require('gulp-connect');
+const chalk = require('chalk');//定制控制台输出样式
+var fs=require("fs");  //读取文件
+const connect = require('gulp-connect');//服务器
 const rev = require('gulp-rev'); //对文件名加MD5后缀
 const less = require('gulp-less'); //编译less文件
 const cssmin = require('gulp-cssmin'); //压缩css文件
@@ -151,22 +153,17 @@ gulp.task('test', function(cb) {
 	gulpSequence('build', 'serve')(cb);
 });
 gulp.task('default', ['test'], function() {
-	console.log('')
-	console.log()
-	console.log('           昨夜西风凋碧树。独上高楼，望尽天涯路。')
-	console.log('           衣带渐宽终不悔，为伊消得人憔悴。')
-	console.log('           众里寻她千百度，蓦然回首，那人却在灯火阑珊处。')
-	console.log('')
-	console.log('')
+	var banner=fs.readFileSync("banner.txt","utf-8");  
+	console.log(chalk.green.underline.bold(banner))
 });
 gulp.task('help', function() {
 	console.log('')
 	console.log('')
-	console.log('           gulp clean	清空dist目录')
-	console.log('           gulp build	编译src中的文件，覆盖到dist目录')
-	console.log('           gulp test	自动执行gulp build并启动一个本地服务器，使用系统默认浏览器打开首页，修改代码后自动加载，实时预览')
-	console.log('           gulp zip	自动执行gulp build并将dist目录中的内容压缩保存到release目录下')
-	console.log('           gulp		默认执行gulp test')
+	console.log('           '+chalk.green.underline.bold('gulp clean')+'   清空dist目录')
+	console.log('           '+chalk.green.underline.bold('gulp build')+'   编译src中的文件，覆盖到dist目录')
+	console.log('           '+chalk.green.underline.bold('gulp test')+'	自动执行 gulp build 并启动一个本地服务器，使用系统默认浏览器打开首页，修改代码后自动加载，实时预览')
+	console.log('           '+chalk.green.underline.bold('gulp zip')+' 	自动执行 gulp build 并将dist目录中的内容压缩保存到release目录下')
+	console.log('           '+chalk.green.underline.bold('gulp')+'		默认执行 gulp test')
 	console.log('')
 	console.log('')
 });
