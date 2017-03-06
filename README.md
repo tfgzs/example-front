@@ -24,23 +24,27 @@
 1. 生产环境上安装node环境
 2. 安装全局依赖 	`npm install -g gulp`
 3. 安装本地依赖 	`npm install`
-4. 编译并运行   	`npm test`
-5. 浏览器访问		`http://localhost:80`
+4. 编译并运行   	`gulp`
+5. 浏览器访问	`http://localhost:80`
  
 ## 生产环境上线流程
 1. 生产环境上安装node环境
 2. 安装全局依赖 `npm install -g gulp`
 3. 安装本地依赖 `npm install`
-4. 编译源码文件 `gulp build`
-5. 运行 `npm prod`
-6. 浏览器访问 `http://localhost:80`
+4. 添加系统环境变量 
+	- `NODE_ENV=production`
+	- `App_Name=项目名`
+	- `App_Version=版本号`
+5. 编译源码文件 `gulp build`
+6. 运行 `npm start`
+7. 浏览器访问 `http://localhost:80`
 
 ## gulp常用插件
 - gulp-jshint 检查js文件是否有报错或警告
 - gulp-uglify 压缩js文件
 - webpack-stream js打包
 
-- gulp-css-spriter 雪碧图
+- gulp-css-spriter 雪碧图/精灵图
 - gulp-sass 编译sass变为css
 - gulp-less 编译less变为css
 - gulp-cssmin css压缩
@@ -61,6 +65,8 @@
 - gulp-md5-plus避免浏览器读取了旧的缓存文件，需要为其添加md5戳
 - gulp-rev 对文件名加MD5后缀
 - gulp-rev-collector 路径替换
+
+- gulp-open	打开浏览器
 
 
 

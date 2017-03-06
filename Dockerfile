@@ -25,13 +25,13 @@ WORKDIR   /app
 RUN   \
   npm install
 
-# 生产环境编译代码
+# 编译代码
 RUN   \
-  npm build
+  gulp build
 
 
 # 容器运行的时候监听80端口
 EXPOSE  80
 
-# 执行npm prod正式运行
-CMD ["npm", "prod"]
+# 执行npm start正式运行
+CMD ["npm", "start"]
