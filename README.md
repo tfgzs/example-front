@@ -34,6 +34,14 @@
 6. 运行 `npm start`
 7. 浏览器访问 `http://localhost:80`
 
+## git 常用命令 
+- `git branch -a` 列出所有本地分支和远程分支
+- `git branch [branch-name]` 新建一个分支，但依然停留在当前分支
+- `git checkout  [branch]`   切换到某分支
+- `git checkout -b [branch]` 新建一个分支，并切换到该分支
+- `git add .` 当前目录所有都加入到暂存区
+- `git commit -m "注释"` 提交代码
+- `git push` 推送代码到远程仓库
 
 ## npm 常用命令
 - `npm config set registry https://registry.npm.taobao.org` 以后使用`npm install`时从淘宝镜像仓库下载，防止被墙，提高下载速度
