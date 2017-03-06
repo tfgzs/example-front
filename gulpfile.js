@@ -52,7 +52,7 @@ gulp.task('serve', function() {
 			if(err) console.log(err)
 		})
 	})
-	gulp.watch('src/templates/**/*.html', function(event) {
+	gulp.watch('src/views/**/*.html', function(event) {
 		gulpSequence('build:html', 'livereload:html')(function(err) {
 			if(err) console.log(err)
 		})
@@ -109,7 +109,7 @@ gulp.task('build:js', function() {
 });
 //替换html中的内容
 gulp.task('build:html', ['build:less', 'build:css', 'build:js'], function() {
-	return gulp.src(['dist/rev/**/*.json', 'src/templates/**/*.html'])
+	return gulp.src(['dist/rev/**/*.json', 'src/**/*.html'])
 		.pipe(revCollector({
 			replaceReved: true
 		}))
@@ -117,7 +117,7 @@ gulp.task('build:html', ['build:less', 'build:css', 'build:js'], function() {
 			empty: true,
 			spare: true
 		}), prettify()))
-		.pipe(gulp.dest('dist', {
+		.pipe(gulp.dest('dist/', {
 			mode: '0644'
 		}));
 });
@@ -137,13 +137,13 @@ gulp.task('zip', ['build'], function() {
 //编译文件
 gulp.task('build', ['build:html'], function() {
 	//js/css/html 之外的所有文件都直接拷贝,给文件设置权限0644：当前用户拥有读写权限，其他的用户只有只读权限
-	gulp.src(['src/**/*.*', '!src/static/css/*.+(css|less)', '!src/static/js/*.js', '!src/templates/**/*.html', '!src/mock/**/*.*'])
+	gulp.src(['src/**/*.*', '!src/static/css/*.+(css|less)', '!src/static/js/*.js', '!src/**/*.html', '!src/mock/**/*.*'])
 		.pipe(gulp.dest('dist/', {
 			mode: '0644'
 		}));
 	//只要不是生产环境就拷贝mock文件加到dist目录
 	if(env != 'production') {
-		gulp.src(['src/mock/']).pipe(gulp.dest('dist/', {
+		gulp.src(['src/mock/**/*.*']).pipe(gulp.dest('dist/mock/', {
 			mode: '0644'
 		}));
 	}

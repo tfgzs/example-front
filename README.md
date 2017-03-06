@@ -8,7 +8,7 @@
 -  所有的`字体`	文件放到 	`src/static/font/`		目录下
 -  所有的`css`	文件放到 	`src/static/css/`		目录下
 -  所有的`less`	文件放到		`src/static/css/`		目录下
--  所有的`html`	文件放到 	`src/html/`				目录下
+-  所有的`html`	文件放到 	`src/views/`			目录下
 
  `注意：src/static/css/ 目录下不要创建文件名相同的两个less和css文件，防止文件覆盖` 
  `注意：src/static/js/和src/static/css/不要再创建子目录，如果要分模块，用"-"链接 `
