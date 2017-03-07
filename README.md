@@ -17,7 +17,6 @@
 1. 生产环境上安装node环境
 2. 安装全局依赖 	
 	- `npm install -g gulp`
-	- `npm install -g bower`
 3. 安装本地依赖 	`npm install`
 4. 编译并运行   	`gulp`
 5. 浏览器访问	`http://localhost:80`

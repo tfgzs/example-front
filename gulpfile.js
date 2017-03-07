@@ -137,7 +137,7 @@ gulp.task('zip', ['build'], function() {
 //编译文件
 gulp.task('build', ['build:html'], function() {
 	//js/css/html 之外的所有文件都直接拷贝,给文件设置权限0644：当前用户拥有读写权限，其他的用户只有只读权限
-	gulp.src(['src/**/*.*', '!src/static/css/*.+(css|less)', '!src/static/js/*.js', '!src/**/*.html', '!src/mock/**/*.*'])
+	gulp.src(['src/**/*.*', '!src/static/css/**/*.+(css|less)', '!src/static/js/*.js', '!src/**/*.html', '!src/mock/**/*.*'])
 		.pipe(gulp.dest('dist/', {
 			mode: '0644'
 		}));
