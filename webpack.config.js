@@ -1,0 +1,10 @@
+module.exports={
+    entry:{
+        index:'./src/script/main.js',
+        user:'./src/script/user.js'
+    },
+    output:{
+        path:'./dist/js',
+        filename:'[name]-[hash].js'
+    }
+}
