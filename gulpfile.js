@@ -52,7 +52,7 @@ gulp.task('serve', function() {
 			if(err) console.log(err)
 		})
 	})
-	gulp.watch('src/views/**/*.html', function(event) {
+	gulp.watch('src/**/*.html', function(event) {
 		gulpSequence('build:html', 'livereload:html')(function(err) {
 			if(err) console.log(err)
 		})
@@ -159,11 +159,9 @@ gulp.task('default', ['test'], function() {
 gulp.task('help', function() {
 	console.log('')
 	console.log('')
-	console.log('           '+chalk.green.underline.bold('gulp clean')+'   清空dist目录')
 	console.log('           '+chalk.green.underline.bold('gulp build')+'   编译src中的文件，覆盖到dist目录')
-	console.log('           '+chalk.green.underline.bold('gulp test')+'	自动执行 gulp build 并启动一个本地服务器，使用系统默认浏览器打开首页，修改代码后自动加载，实时预览')
-	console.log('           '+chalk.green.underline.bold('gulp zip')+' 	自动执行 gulp build 并将dist目录中的内容压缩保存到release目录下')
-	console.log('           '+chalk.green.underline.bold('gulp')+'		默认执行 gulp test')
+	console.log('           '+chalk.green.underline.bold('gulp clean')+'   清空dist目录')
+	console.log('           '+chalk.green.underline.bold('gulp')+'		自动执行 gulp build 浏览器自动打开网站首页，修改代码后实时预览')
 	console.log('')
 	console.log('')
 });

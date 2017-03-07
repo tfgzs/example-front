@@ -1,0 +1,56 @@
+// template-1是轮播图
+.template-1 {
+    .banner {
+        width: 100%;
+        position: relative;
+        .swipe {
+            overflow: hidden;
+            position: relative;
+        }
+        .swipe-wrap {
+            overflow: hidden;
+            position: relative;
+            list-style: none;
+            li {
+                float: left;
+                position: relative;
+            }
+        }
+        img {
+            width: 100%;
+            vertical-align: middle;
+        }
+        .slide-trigger {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            z-index: 10;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -moz-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            list-style: none;
+            li {
+                width: 10px;
+                height: 10px;
+                background: #FFF;
+                margin: 5px;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                border-radius: 50%;
+            }
+            .cur {
+                background: #2fc7c9;
+            }
+        }
+    }
+}
