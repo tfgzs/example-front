@@ -52,7 +52,7 @@ gulp.task('serve', function() {
 			if(err) console.log(err)
 		})
 	})
-	gulp.watch('src/views/**/*.html', function(event) {
+	gulp.watch('src/**/*.html', function(event) {
 		gulpSequence('build:html', 'livereload:html')(function(err) {
 			if(err) console.log(err)
 		})
